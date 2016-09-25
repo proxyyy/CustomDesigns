@@ -71,19 +71,6 @@ body, .form .control-group input[type=email], .form .control-group input[type=pa
 	opacity: 0 !important;
 }
 
-.online, .status-online {
-		background: #556B82 !important;	
-}
-
-.idle {
-		background: #8a7b70 !important;		
-}
-
-.offline, .status-offline {
-		background: #1A1B26 !important;	
-		color: #1A1B26 !important;	
-}
-
 .links, .user-settings-modal-keybinds .user-settings-modal-keybinds-header, .form .control-group input[type=email], .form .control-group input[type=password], .form .control-group input[type=text], .form .control-group textarea, .popout section, .settings .settings-actions, .chat>.content .messages .message-group:not(.has-divider) {
 	border: none !important;
 }
@@ -116,7 +103,6 @@ body, .form .control-group input[type=email], .form .control-group input[type=pa
 
 .guild-header ul {
     background: #1a1b26 !important;
-    opacity:0 !important;
     transition: transform .5s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
 }
 
@@ -766,14 +752,22 @@ user-popout .username-wrapper.has-nickname .nickname {
 	background:#1d1e2a !important;
 }
 
-/* BETTER DISCORD THINGS */
+.user-settings-streamer-mode {
+    color: #1d1e2a !important;
+}
+
+/*BETTER DISCORD THINGS */
+
+#bd-customcss-attach-controls{                            /* Controls underneath CSS editor */
+  border: 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+}
 
 .bda-slist li{                                            /* List of plugins or themes */
   background: #1a1b26 !important;
   border-bottom: 1px solid #353535;
   border-top: 0 !important;
-  min-height: 50px;
-  max-height: 70px;
 }
 .bda-slist .bda-right .bda-plugin-reload,
 #bd-themes-pane .bda-plugin-reload{
@@ -791,12 +785,13 @@ user-popout .username-wrapper.has-nickname .nickname {
   border-top: 1px solid #353535;
   color: #74857c;
   max-height: 80px;
-  font-size: 13px;
+
 }
+
 
 /*---------------------Made By Beard Design-----------------------*/
 .checkbox .checkbox-inner input[type=checkbox]:checked+span:after{
-    background:#7289DA!important;
+    background:#4b794e!important;
     top:-3px;
     border-right:0px;
     border-bottom:0px;
@@ -806,7 +801,7 @@ user-popout .username-wrapper.has-nickname .nickname {
 }
 
 .checkbox .checkbox-inner input[type=checkbox]:checked+span{
-    background:#ADB8E1;
+    background:#5fa05d;
     border:0px;
     height:15px;
     width:30px;
@@ -852,7 +847,6 @@ user-popout .username-wrapper.has-nickname .nickname {
 	transform:translate(-13px);
 }
 /*---------------------Made By Beard Design-----------------------*/
-
 
 // ICONS
 /* "Discord Material Icons v1.3" by @Zerthox */
@@ -1802,3 +1796,44 @@ content: "";position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 
 #user-profile-modal .guilds .avatar-large {background-color: transparent;}
 
 .user-popout .header.streaming{background-color: rgba(89, 54, 149, 255);}
+
+.messages-popout .message-group .sink-interactions.clickable,
+.messages-popout .message-group .avatar-large,
+.messages-popout .message-group h2 {
+	pointer-events: none;
+}
+
+
+.channel-members .avatar-small .status,
+.private-channels .avatar-small .status {
+    width: 30px;
+	height: 30px;
+    background: transparent !important;
+    border-radius: 50%;
+    top: -2px;
+    left: -2px;
+    box-shadow: 0 0 1px #000 inset;
+}
+.channel-members .avatar-small .status-online,
+.private-channels  .avatar-small .status-online {
+    border: 2px solid #5fa05d !important;
+}
+.channel-members .avatar-small .status-idle,
+.private-channels  .avatar-small .status-idle {
+    border: 2px solid #faa61a !important;
+}
+.channel-members .avatar-small .status-offline,
+.private-channels  .avatar-small .status-offline {
+    border: 2px solid #747f8d !important;
+}
+.channel-members .avatar-small .status-streaming,
+.private-channels .avatar-small .status-streaming {
+    border: 2px solid #643da7 !important;
+}
+.status.status-typing {
+	width: 30px !important;
+}
+.status.status-typing .spinner .spinner-inner {
+	left: 1px;
+    top: 1px;
+}
