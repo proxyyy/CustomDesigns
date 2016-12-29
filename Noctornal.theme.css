@@ -1,11 +1,32 @@
-//META{"name":"Nocturnal","description":"Shoutouts to simpleflips","author":"proxy","version":"1.5"}*//
+//META{"name":"Nocturnal","description":"Shoutouts to simpleflips","author":"proxy","version":"2.0"}*//
 
 .app {
 	background: #1d1e2a;
 }
 
-textarea {
+textarea, .guild-inner {
 	background: #1d1e2a;
+}
+
+.markdown-modal {
+	background: #1d1e2a;
+}
+
+.markdown-modal .markdown-modal-header{
+	background: #1d1e2a;
+	color: #8a7b70;
+	border-bottom: 0px;
+}
+
+.markdown-modal .scroller-wrap .scroller>:last-child{
+	background: #1d1e2a;
+	color: #8a7b70;
+}
+
+.markdown-modal .markdown-modal-footer{
+	background: #1d1e2a;
+	color: #8a7b70;
+	border-top: 0px;
 }
 
 .scroller-wrap .scroller::-webkit-scrollbar-thumb {
@@ -32,7 +53,6 @@ textarea {
 .guild-channels,
 .private-channels,
 .guild-header header,
-.divider-red span,
 .messages-wrapper,
 #voice-connection {
 	background: transparent !important;
@@ -80,7 +100,7 @@ body, .form .control-group input[type=email], .form .control-group input[type=pa
 }
 
 .chat .divider.divider-red>span, {
-      background: transparent !important
+      background: #9c363b !important
 }
 
 .guilds li.active .guild-inner, element.style, .Select-control, .form .control-group input[type=email], .form .control-group input[type=password], .form .control-group input[type=text], .form .control-group textarea {
@@ -310,15 +330,15 @@ channel.channel-text.selected,
 }
 
 .chat .new-messages-bar {
-	background-color: #1d1e2a !important;
+	background-color: #9c363b !important;
 }
 
 .chat .new-messages-bar:hover {
-	background-color: #1d1e2a !important;
+	background-color: #9c363b !important;
 }
 
 .chat .new-messages-bar button:last-child {
-	color:rgba(255,255,255,0.5);
+	color:#9c363b);
 }
 
 .chat-empty {
@@ -351,7 +371,7 @@ channel.channel-text.selected,
 
 /* Date 1px line */
 .chat .divider:not(.divider-red)>div {
-	background:rgba(255,255,255,0.2) !important;
+	background:#9c363b !important;
 }
 
 .chat .divider>span {
@@ -367,12 +387,12 @@ channel.channel-text.selected,
 }
 
 .chat .divider.divider-red>span {
-	background: rgba(240,71,71,.6) !important;
-    color: rgba(255,255,255,0.8) !important;
+	background: #9c363b !important;
+    color: #1d1e2a !important;
 }
 
 .chat .divider:not(.divider-red)>span {
-	color:rgba(255,255,255,1) !important;
+	color:#9c363b !important;
 }
 
 .chat .divider>div, .help-container, .links li {
@@ -387,7 +407,7 @@ channel.channel-text.selected,
 
 
 .chat>.content .messages .message-group h2 span {
-	color:rgba(255,255,255,0.2) !important;
+	color:rgba(255,255,255) !important;
 }
 
 .chat>.content .messages .message-group .markup pre {
@@ -1503,12 +1523,12 @@ span[style='background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR
     background-position: center;
     background-size: 24px;
 }
-#user-profile-modal .header .additional-actions-icon {
+/*#user-profile-modal .header .additional-actions-icon {
     background: url(https://cdn.rawgit.com/Zerthox/Material-Icon-Theme/master/icons/expand_more.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 200%;
-}
+}*/
 .theme-dark .messages-popout-wrap .messages-popout .message-group .action-buttons .close-button {
     background-image: url(https://cdn.rawgit.com/Zerthox/Material-Icon-Theme/master/icons/close.svg) !important;
     background-repeat: no-repeat;
@@ -1667,7 +1687,6 @@ span[style='background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR
     -webkit-backface-visibility: hidden;
 }
 
-
 .user-popout .header.streaming{background-color: rgba(89, 54, 149, 255);}
 
 .messages-popout .message-group .sink-interactions.clickable,
@@ -1675,7 +1694,6 @@ span[style='background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR
 .messages-popout .message-group h2 {
 	pointer-events: none;
 }
-
 
 .channel-members .avatar-small .status,
 .private-channels .avatar-small .status {
@@ -1703,6 +1721,10 @@ span[style='background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR
 .private-channels .avatar-small .status-streaming {
     border: 2px solid #643da7 !important;
 }
+.channel-members .avatar-small .status-dnd,
+.private-channels .avatar-small .status-dnd {
+    border: 2px solid #e91e63 !important;
+}
 .status.status-typing {
 	width: 30px !important;
 }
@@ -1710,3 +1732,18 @@ span[style='background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR
 	left: 1px;
     top: 1px;
 }
+.popout-menu, .popout-menu .popout-menu-item {
+	background: #14151f;
+	color: #777777;
+	font-weight: bold;
+}
+.messages-popout{
+	background: #14151f;
+}
+.popout-menu .popout-menu-item:hover, .theme-dark .themed-popout .header, .theme-dark .themed-popout .footer, .theme-dark .messages-popout-wrap .messages-popout .message-group, .theme-dark .messages-popout-wrap .messages-popout .message-group:hover .action-buttons {
+	background: #1d1e2a;
+}
+.guild-channels .channel-text.selected a{
+	background-color: #1d1e2a !important;
+}
+
